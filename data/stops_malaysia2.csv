@@ -1,0 +1,71 @@
+stop_name,lat,lon,mode,line
+Gombak LRT station,3.226437,101.724989,LRT,Kelana Jaya Line
+Taman Melati LRT station,3.223688,101.726384,LRT,Kelana Jaya Line
+Wangsa Maju LRT station,3.208613,101.733085,LRT,Kelana Jaya Line
+Sri Rampai LRT station,3.201344,101.744175,LRT,Kelana Jaya Line
+Setiawangsa LRT station,3.177713,101.75013,LRT,Kelana Jaya Line
+Jelatek LRT station,3.184833,101.74807,LRT,Kelana Jaya Line
+Dato' Keramat LRT station,3.166291,101.724998,LRT,Kelana Jaya Line
+Damai LRT station (Malaysia),3.166291,101.724998,LRT,Kelana Jaya Line
+Ampang Park LRT station,3.15976,101.707857,LRT,Kelana Jaya Line
+KLCC LRT station,3.15976,101.707857,LRT,Kelana Jaya Line
+Kampung Baru LRT station,3.166093,101.711031,LRT,Kelana Jaya Line
+Dang Wangi LRT station,3.1516964,101.6942371,LRT,Kelana Jaya Line
+Masjid Jamek LRT station,3.1516964,101.6942371,LRT,"""Kelana Jaya Line,Ampang Line,Sri Petaling Line"""
+Pasar Seni LRT station,3.145855,101.69568,LRT,Kelana Jaya Line
+Kuala Lumpur Sentral railway station,3.1342,101.6861,LRT,Kelana Jaya Line
+Bank Rakyat-Bangsar LRT Station,3.1277,101.6791,LRT,Kelana Jaya Line
+Abdullah Hukum station,3.118973,101.672512,LRT,Kelana Jaya Line
+Kerinchi LRT station,3.115596,101.668543,LRT,Kelana Jaya Line
+Universiti LRT station,3.07154,101.702468,LRT,Kelana Jaya Line
+Taman Jaya LRT station,3.099175,101.645023,LRT,Kelana Jaya Line
+Asia Jaya LRT station,3.098357,101.590096,LRT,Kelana Jaya Line
+Taman Paramount LRT station,3.1048,101.6232,LRT,Kelana Jaya Line
+Taman Bahagia LRT station,3.1107,101.6127,LRT,Kelana Jaya Line
+Kelana Jaya LRT station,3.1124,101.6045,LRT,Kelana Jaya Line
+Lembah Subang LRT station,3.1121,101.5912,LRT,Kelana Jaya Line
+Ara Damansara LRT station,3.123983,101.582308,LRT,Kelana Jaya Line
+Glenmarie LRT station,3.082665,101.561558,LRT,Kelana Jaya Line
+Subang Jaya station,3.079168,101.598234,LRT,Kelana Jaya Line
+SS15 LRT station,3.0766,101.586589,LRT,Kelana Jaya Line
+SS18 LRT station,3.06931,101.594653,LRT,Kelana Jaya Line
+USJ7 LRT station,3.055689,101.580523,LRT,Kelana Jaya Line
+Taipan LRT station,3.055689,101.580523,LRT,Kelana Jaya Line
+Wawasan LRT station,3.0792,101.580845,LRT,Kelana Jaya Line
+USJ21 LRT station,3.0792,101.580845,LRT,Kelana Jaya Line
+Alam Megah LRT station,3.006683,101.568885,LRT,Kelana Jaya Line
+Subang Alam LRT station,3.017094,101.558721,LRT,Kelana Jaya Line
+Putra Heights LRT station,3.012442,101.579268,LRT,"""Kelana Jaya Line,Sri Petaling Line"""
+Stesen LRT Sentul Timur,3.200893,101.696198,LRT,"""Ampang Line,Sri Petaling Line"""
+Titiwangsa station,3.166162,101.70943,LRT,"""Ampang Line,Sri Petaling Line"""
+Stesen LRT PWTC,3.165086,101.6978325,LRT,"""Ampang Line,Sri Petaling Line"""
+Stesen LRT Sultan Ismail,3.151696,101.694237,LRT,"""Ampang Line,Sri Petaling Line"""
+Stesen LRT Bandaraya,3.153366,101.699014,LRT,"""Ampang Line,Sri Petaling Line"""
+Plaza Rakyat LRT station,3.144,101.7021,LRT,"""Ampang Line,Sri Petaling Line"""
+BBCC-Hang Tuah station,3.137433,101.704462,LRT,"""Ampang Line,Sri Petaling Line"""
+Stesen LRT Pudu,3.1470725,101.716104,LRT,"""Ampang Line,Sri Petaling Line"""
+Stesen Chan Sow Lin,3.125437,101.713447,LRT,"""Ampang Line,Sri Petaling Line"""
+Cheras LRT station,3.1516964,101.6942371,LRT,Sri Petaling Line
+Salak Selatan LRT station,3.1516964,101.6942371,LRT,Sri Petaling Line
+Bandar Tun Razak LRT station,3.091532,101.712893,LRT,Sri Petaling Line
+Bandar Tasik Selatan station,3.071825,101.716913,LRT,Sri Petaling Line
+Sungai Besi station,3.065979,101.712342,LRT,Sri Petaling Line
+Bukit Jalil LRT station,3.057827,101.674269,LRT,Sri Petaling Line
+Sri Petaling LRT station,3.068288,101.684762,LRT,Sri Petaling Line
+Awan Besar LRT station,3.062206,101.664358,LRT,Sri Petaling Line
+Muhibbah LRT station,3.1516964,101.6942371,LRT,Sri Petaling Line
+Alam Sutera LRT station,3.0547,101.6565,LRT,Sri Petaling Line
+Kinrara BK 5 LRT station,3.043339,101.641019,LRT,Sri Petaling Line
+IOI Puchong Jaya LRT station,3.039964,101.627957,LRT,Sri Petaling Line
+Pusat Bandar Puchong LRT station,3.036029,101.616056,LRT,Sri Petaling Line
+Taman Perindustrian Puchong LRT station,3.011881,101.612986,LRT,Sri Petaling Line
+Bandar Puteri LRT station,3.02364,101.618385,LRT,Sri Petaling Line
+Puchong Perdana LRT station,3.03955,101.62447,LRT,Sri Petaling Line
+Puchong Prima LRT station,2.9998,101.5967,LRT,Ampang Line
+Stesen LRT Miharja,3.1470725,101.716104,LRT,Ampang Line
+Stesen Maluri,3.12828,101.737233,LRT,Ampang Line
+Stesen LRT Pandan Jaya,3.144045,101.765455,LRT,Ampang Line
+Stesen LRT Pandan Indah,3.144045,101.765455,LRT,Ampang Line
+Stesen LRT Cempaka,3.13922,101.748311,LRT,Ampang Line
+Stesen LRT Cahaya,3.138773,101.756844,LRT,Ampang Line
+Stesen LRT Ampang,3.1503,101.7601,LRT,Ampang Line

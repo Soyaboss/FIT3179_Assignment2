@@ -1,0 +1,224 @@
+/* ===== Global ===== */
+body {
+  background-color: rgb(38, 49, 74);          /* deeper blue-grey backdrop */
+  text-align: center;
+}
+
+body * {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;                            /* a touch larger for readability */
+  box-sizing: border-box;
+}
+
+/* ===== Page Shell ===== */
+.page {
+  width: min(1350px, 95vw);
+  margin: 50px auto;
+  padding: 24px;
+  text-align: left;
+  background-color: rgb(246, 248, 252);       /* light neutral for contrast */
+  border-radius: 12px;
+  box-shadow: 10px 10px 20px rgba(17, 23, 35, 0.65),
+              -10px -10px 20px rgba(17, 23, 35, 0.35);
+}
+
+/* ===== Footer ===== */
+footer {
+  color: whitesmoke;
+  display: block;
+  padding: 40px 20px 60px;
+  line-height: 1.6;
+}
+
+/* ===== Typography ===== */
+a {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  color: #9ed0ff;                             /* transit blue link */
+  text-underline-offset: 2px;
+}
+
+b {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0 20px;
+  color: #1d2740;
+  margin: 10px 0;
+}
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(36px, 5vw, 50px);
+  font-weight: 900;
+  text-align: center;
+  margin: 30px 0 10px;
+  color: #0c1530;
+}
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  padding: 16px;
+  background: linear-gradient(180deg, #e9eef7, #dde6f5); /* subtle transit panel */
+  border: 1px solid #cfd9ec;
+  border-radius: 8px;
+  color: #0f2244;
+}
+
+h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #0f2244;
+}
+
+/* ===== Intro text ===== */
+#title-description {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  padding: 16px 20px;
+  text-align: center;
+  color: #1b2442;
+  background: #eef3ff;
+  border: 1px solid #d9e6ff;
+  border-radius: 8px;
+}
+
+/* ===== Layout ===== */
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 12px;                                   /* cleaner gaps between panels */
+  margin-top: 8px;
+}
+
+.idiom,
+.description {
+  flex: 1 1 520px;                             /* each panel grows, min width for 2-column on large screens */
+  padding: 14px;
+  margin: 0 auto;
+}
+
+/* ===== Visualization Containers ===== */
+.vis-container {
+  width: 100%;
+  padding-left: 0;                              /* remove left indent for charts */
+  text-align: center;
+}
+
+/* Give each viz a sensible max-width and height envelope */
+#fare_rates_heatmap,
+#lrt_stations_map,
+#lrt_mrt_ridership {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e3e8f4;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 6px 18px rgba(15, 34, 68, 0.08);
+}
+
+/* Optional: fine-tune relative heights if your specs are responsive */
+#fare_rates_heatmap { min-height: 520px; }
+#lrt_stations_map   { min-height: 520px; }
+#lrt_mrt_ridership  { min-height: 460px; }
+
+/* ===== Donut-related (kept for compatibility if you ever reuse) ===== */
+.donut-flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  padding: 20px;
+  margin-left: 0;                               /* remove left bias */
+  gap: 12px;
+}
+
+.donut-column {
+  margin: 10px;
+}
+
+/* ===== Legend (generic) ===== */
+.legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0f2244;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #0f2244;
+  border-radius: 2px;
+}
+
+/* ===== Table (kept for compatibility; not used in this transit version) ===== */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#bmi-table { border-collapse: collapse; }
+
+#bmi-head {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  background-color: rgb(62, 77, 110);
+  color: whitesmoke;
+  font-size: 14px;
+}
+
+#bmi-body {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  background-color: whitesmoke;
+  font-size: 14px;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 900px) {
+  p { padding: 0 10px; }
+  .page { padding: 18px; }
+  h2 { padding: 12px; }
+}
+
+@media (max-width: 600px) {
+  body * { font-size: 13px; }
+  h1 { font-size: 34px; }
+  h2 { font-size: 22px; }
+}

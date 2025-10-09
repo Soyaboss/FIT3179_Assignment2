@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "LRT Fare Between Stations (Interactive Fare Filter)"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/Soyaboss/FIT3179_Assignment2/refs/heads/main/data/Fare_long.csv"
+  },
+  "width": 900,
+  "height": 900,
+  "params": [
+    {
+      "name": "FareMax",
+      "value": 8,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 8,
+        "step": 0.1,
+        "name": "Max Fare (RM): "
+      }
+    },
+    {"name": "gridZoom", "select": "interval", "bind": "scales"}
+  ],
+  "transform": [{"filter": "datum.Fare <= FareMax"}],
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Destination",
+      "type": "nominal",
+      "title": "Destination",
+      "sort": null,
+      "axis": {"labelAngle": -45, "labelFontSize": 9}
+    },
+    "y": {
+      "field": "Origin",
+      "type": "nominal",
+      "title": "Origin",
+      "sort": null,
+      "axis": {"labelFontSize": 9}
+    },
+    "color": {
+      "field": "Fare",
+      "type": "quantitative",
+      "title": "Fare (RM)",
+      "scale": {"scheme": "blues"}
+    },
+    "tooltip": [
+      {"field": "Origin", "title": "Origin"},
+      {"field": "Destination", "title": "Destination"},
+      {
+        "field": "Fare",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Fare (RM)"
+      }
+    ]
+  },
+  "config": {"view": {"stroke": "transparent"}, "axis": {"grid": false}}
+}

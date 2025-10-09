@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "LRT Fare Between Stations (Interactive Fare Filter)"},
+  "title": {"text": "LRT Fare Between Stations"},
   "data": {
     "url": "https://raw.githubusercontent.com/Soyaboss/FIT3179_Assignment2/refs/heads/main/data/Fare_long.csv"
   },

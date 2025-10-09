@@ -1,0 +1,125 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 550,
+  "title": {"text": "Kuala Lumpur LRT Stations"},
+  "projection": {"type": "mercator", "center": [101.72, 3.11], "scale": 90000},
+  "params": [
+    {
+      "name": "LineFilter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "name": "Line: ",
+        "options": [
+          "All",
+          "Kelana Jaya Line",
+          "Ampang Line",
+          "Sri Petaling Line"
+        ]
+      }
+    }
+  ],
+  "layer": [
+    {"data": {"sphere": true}, "mark": {"type": "geoshape", "fill": "#eaf6ff"}},
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Soyaboss/3179_homework_week9/main/js/geoBoundaries-MYS-ADM3.topojson",
+        "format": {"type": "topojson", "feature": "MYSADM3gbOpen"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "transparent",
+        "stroke": "gray",
+        "strokeWidth": 1.2,
+        "opacity": 0.7
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"name": "Kuala Lumpur", "lon": 101.69, "lat": 3.14},
+          {"name": "Petaling Jaya", "lon": 101.652, "lat": 3.105},
+          {"name": "Subang Jaya", "lon": 101.586, "lat": 3.045},
+          {"name": "Shah Alam", "lon": 101.532, "lat": 3.073},
+          {"name": "Puchong", "lon": 101.62, "lat": 3.02},
+          {"name": "Putrajaya", "lon": 101.675, "lat": 2.926},
+          {"name": "Batu Caves", "lon": 101.6817, "lat": 3.2365}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "fill": "#2f3a4a",
+        "dy": -6
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "name"}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Soyaboss/3179_homework_week9/main/data/stops_malaysia2.csv",
+        "format": {"type": "csv", "parse": {"lat": "number", "lon": "number"}}
+      },
+      "transform": [
+        {"calculate": "'LRT Station'", "as": "Category"},
+        {"filter": "LineFilter == 'All' || test(LineFilter, datum.line)"}
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 1,
+        "stroke": "black",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {"value": 40},
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "legend": {
+            "title": "",
+            "orient": "right",
+            "labelExpr": "'LRT Station'"
+          }
+        },
+        "tooltip": [
+          {"field": "stop_name", "title": "Station: "},
+          {"field": "line", "title": "Line(s): "},
+          {
+            "field": "lat",
+            "title": "Latitude: ",
+            "type": "quantitative",
+            "format": ".4f"
+          },
+          {
+            "field": "lon",
+            "title": "Longitude: ",
+            "type": "quantitative",
+            "format": ".4f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "graticule": {
+          "extent": [[101.45, 2.9], [101.95, 3.35]],
+          "step": [0.05, 0.05]
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#aaaaaa",
+        "strokeWidth": 0.6,
+        "opacity": 0.8
+      }
+    }
+  ],
+  "config": {"view": {"stroke": "transparent"}}
+}

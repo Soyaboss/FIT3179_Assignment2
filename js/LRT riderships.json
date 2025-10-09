@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Daily LRT & MRT Ridership — Line Chart with Bottom Slider"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Soyaboss/3179_homework_week10/refs/heads/main/ridership_lrt_mrt_long%20(1).csv",
+    "format": {"type": "csv", "parse": {"date": "utc:%Y-%m-%d"}}
+  },
+  "width": 800,
+  "params": [
+    {
+      "name": "modePick",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "LRT", "MRT"],
+        "name": "Mode: "
+      }
+    }
+  ],
+  "transform": [{"filter": "modePick == 'All' || datum.mode == modePick"}],
+  "vconcat": [
+    {
+      "width": 800,
+      "height": 420,
+      "mark": {"type": "line", "point": false},
+      "transform": [{"filter": {"param": "brush"}}],
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "timeUnit": "utcyearmonthdate",
+          "title": "Date"
+        },
+        "y": {
+          "field": "ridership",
+          "type": "quantitative",
+          "title": "Ridership"
+        },
+        "color": {
+          "field": "mode_line",
+          "type": "nominal",
+          "title": "Line",
+          "legend": {"title": "LRT/MRT Lines"}
+        },
+        "tooltip": [
+          {
+            "field": "date",
+            "type": "temporal",
+            "timeUnit": "utcyearmonthdate",
+            "title": "Date"
+          },
+          {"field": "mode", "type": "nominal", "title": "Mode"},
+          {"field": "mode_line", "type": "nominal", "title": "Line"},
+          {
+            "field": "ridership",
+            "type": "quantitative",
+            "title": "Ridership",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "width": 800,
+      "height": 90,
+      "mark": {"type": "line", "opacity": 0.6},
+      "params": [
+        {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
+      ],
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "timeUnit": "utcyearmonthdate",
+          "title": ""
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "ridership",
+          "type": "quantitative",
+          "title": " "
+        },
+        "color": {"value": "#888"}
+      }
+    }
+  ],
+  "config": {
+    "axis": {"grid": true},
+    "legend": {"orient": "bottom"},
+    "view": {"stroke": "transparent"}
+  }
+}

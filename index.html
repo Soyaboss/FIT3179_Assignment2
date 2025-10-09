@@ -87,18 +87,18 @@
     // Note: file names with spaces are URL-encoded.
 
     // 1) Fare Rates
-    var fareSpec = "js/Fare%20Rates.json";
+    var fareSpec = "js/Fare Rates.json";
     vegaEmbed('#fare_rates_heatmap', fareSpec).then(function(result) {
       // result.view for programmatic control if needed
     }).catch(console.error);
 
     // 2) LRT Stations
-    var stationsSpec = "js/LRT%20stations.json";
+    var stationsSpec = "js/LRT stations.json";
     vegaEmbed('#lrt_stations_map', stationsSpec).then(function(result) {
     }).catch(console.error);
 
     // 3) LRT & MRT Ridership
-    var ridershipSpec = "js/LRT%20riderships.json";
+    var ridershipSpec = "js/LRT riderships.json";
     vegaEmbed('#lrt_mrt_ridership', ridershipSpec).then(function(result) {
     }).catch(console.error);
   </script>

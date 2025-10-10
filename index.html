@@ -51,13 +51,12 @@
 
       <div class="description">
         <p>
-          The map shows <b>station locations</b> and (if the spec includes it) <b>line filters</b>. Use it to understand spatial coverage
-          and proximity between lines.
+          The map shows <b>station locations</b> and with <b>line filters</b>. This helps better understand the spatial coverage
+          and proximity between LRT lines in Kuala Lumpur.
         </p>
       </div>
     </div>
 
-    <!-- 3) Ridership -->
     <h2>
       How has daily ridership changed over time?
     </h2>
@@ -69,8 +68,8 @@
 
       <div class="description">
         <p>
-          Interact with the <b>date slider/brush</b> or <b>mode filter</b> (if defined within the spec) to zoom into specific periods and
-          compare <b>LRT vs MRT</b> lines.
+          Interact with the <b>date slider/brush</b> or <b>mode filter</b> to zoom into specific periods and
+          compare <b>LRT vs MRT</b> lines. According to the graph we can see a massive decrease in <b> 2020 </b> due to the covid pandemic.
         </p>
       </div>
     </div>
@@ -82,21 +81,19 @@
   </footer>
 
   <script type="text/javascript">
-    // === Embed your 3 idioms (JSON specs placed in /js) ===
-    // Note: file names with spaces are URL-encoded.
 
-    // 1) Fare Rates
+
+
     var fareSpec = "js/Fare Rates.json";
     vegaEmbed('#fare_rates_heatmap', fareSpec).then(function(result) {
-      // result.view for programmatic control if needed
     }).catch(console.error);
 
-    // 2) LRT Stations
+
     var stationsSpec = "js/LRT stations.json";
     vegaEmbed('#lrt_stations_map', stationsSpec).then(function(result) {
     }).catch(console.error);
 
-    // 3) LRT & MRT Ridership
+
     var ridershipSpec = "js/LRT riderships.json";
     vegaEmbed('#lrt_mrt_ridership', ridershipSpec).then(function(result) {
     }).catch(console.error);

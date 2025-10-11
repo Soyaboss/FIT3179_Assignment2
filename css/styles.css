@@ -24,14 +24,22 @@ body * {
 
 
 footer {
-  background-color: rgb(17, 23, 35);
-  color: white;
+  background-color: rgb(33, 42, 61); /* nice contrast with page bg */
+  color: whitesmoke;
   display: block;
-  padding: 40px 20px 60px;
-  line-height: 1.6;
+  padding: 50px;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
+
+footer p {
+  color: whitesmoke; /* force override */
+}
+
+footer a {
+  color: lightblue; /* make links visible */
+  text-decoration: underline;
+}
+
 
 a {
   font-family: 'Times New Roman', Times, serif;
@@ -184,6 +192,7 @@ h3 {
   border: 1px solid #0f2244;
   border-radius: 2px;
 }
+
 
 
 

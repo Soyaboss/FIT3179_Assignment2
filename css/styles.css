@@ -24,7 +24,7 @@ body * {
 
 
 footer {
-  color: whitesmoke;
+  color: white;
   display: block;
   padding: 40px 20px 60px;
   line-height: 1.6;
@@ -181,6 +181,7 @@ h3 {
   border: 1px solid #0f2244;
   border-radius: 2px;
 }
+
 
 
 

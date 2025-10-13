@@ -1,87 +1,89 @@
-
 body {
-  background-color: rgb(38, 49, 74);         
+  background-color: rgb(62, 77, 110);
   text-align: center;
 }
 
 body * {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;                           
-  box-sizing: border-box;
+  font-size: small;
 }
 
-
+/* ---------- PAGE CONTAINER ---------- */
 .page {
-  width: min(1350px, 95vw);
-  margin: 50px auto;
-  padding: 24px;
+  width: 1350px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
   text-align: left;
-  background-color: rgb(246, 248, 252);       
-  border-radius: 12px;
-  box-shadow: 10px 10px 20px rgba(17, 23, 35, 0.65),
-              -10px -10px 20px rgba(17, 23, 35, 0.35);
+  background-color: rgb(240, 240, 240);
+  box-shadow: 10px 10px 20px rgb(33, 42, 61),
+              -10px -10px 20px rgb(33, 42, 61);
 }
 
-
+/* ---------- FOOTER SECTION ---------- */
 footer {
-  background-color: rgb(33, 42, 61); /* nice contrast with page bg */
+  background-color: rgb(33, 42, 61);
   color: whitesmoke;
   display: block;
-  padding: 50px;
+  padding: 50px 20px;
   text-align: center;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 50px;
+  box-shadow: 0 -5px 15px rgba(17, 23, 35, 0.3);
 }
 
 footer p {
-  color: whitesmoke; /* force override */
+  color: whitesmoke; /* ensure white text inside footer */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  margin: 10px 0;
 }
 
 footer a {
-  color: lightblue; /* make links visible */
+  color: lightblue;
   text-decoration: underline;
+  text-underline-offset: 2px;
+  font-size: medium;
 }
 
-
+/* ---------- TEXT STYLES ---------- */
 a {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 16px;
-  color: #9ed0ff;                             
-  text-underline-offset: 2px;
+  font-size: medium;
+  color: lightblue;
 }
 
 b {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
+  font-size: large;
 }
 
 p {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 26px;
-  padding: 0 20px;
-  color: #1d2740;
-  margin: 10px 0;
+  font-size: medium;
+  line-height: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #1d2740; /* dark text for content area */
 }
 
 h1 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(36px, 5vw, 50px);
+  font-size: 50px;
   font-weight: 900;
   text-align: center;
-  margin: 30px 0 10px;
-  color: #0c1530;
+  margin-top: 50px;
 }
 
 h2 {
   font-family: 'Times New Roman', Times, serif;
-  font-size: clamp(22px, 3vw, 28px);
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
   text-align: center;
-  margin-top: 30px;
-  padding: 16px;
-  background: linear-gradient(180deg, #e9eef7, #dde6f5); 
-  border: 1px solid #cfd9ec;
-  border-radius: 8px;
-  color: #0f2244;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: rgb(214, 214, 214);
 }
 
 h3 {
@@ -89,113 +91,107 @@ h3 {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
-  color: #0f2244;
 }
-
 
 #title-description {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 20px;
-  padding: 16px 20px;
+  font-size: large;
+  line-height: 25px;
+  margin-bottom: 25px;
+  padding: 20px;
   text-align: center;
   color: #1b2442;
-  background: #eef3ff;
-  border: 1px solid #d9e6ff;
-  border-radius: 8px;
 }
 
+/* ---------- VISUALIZATION CONTAINERS ---------- */
+.vis-container {
+  width: 100%;
+  text-align: center;
+  padding-left: 38px;
+}
 
 .flex-container {
   display: flex;
   justify-content: space-evenly;
-  align-items: stretch;
   flex-wrap: wrap;
-  gap: 12px;                                   
-  margin-top: 8px;
 }
-
-.idiom,
-.description {
-  flex: 1 1 520px;                             
-  padding: 14px;
-  margin: 0 auto;
-}
-
-
-.vis-container {
-  width: 100%;
-  padding-left: 0;                              
-  text-align: center;
-}
-
-
-#fare_rates_heatmap,
-#lrt_stations_map,
-#lrt_mrt_ridership {
-  max-width: 100%;
-  margin: 0 auto;
-  background: #ffffff;
-  border: 1px solid #e3e8f4;
-  border-radius: 10px;
-  padding: 8px;
-  box-shadow: 0 6px 18px rgba(15, 34, 68, 0.08);
-}
-
-
-#fare_rates_heatmap { min-height: 520px; }
-#lrt_stations_map   { min-height: 520px; }
-#lrt_mrt_ridership  { min-height: 460px; }
-
 
 .donut-flex-container {
   display: flex;
   justify-content: space-evenly;
   flex: 1;
   padding: 20px;
-  margin-left: 0;                               
-  gap: 12px;
+  margin-left: 50px;
 }
 
 .donut-column {
   margin: 10px;
 }
 
+.idiom {
+  flex: 1;
+  padding: 15px;
+  margin: auto;
+}
 
+.description {
+  flex: 1;
+  padding: 15px;
+  margin: auto;
+}
+
+/* ---------- TABLES ---------- */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* BMI table */
+#bmi-table {
+  border-collapse: collapse;
+}
+
+#bmi-head {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  background-color: rgb(62, 77, 110);
+  color: whitesmoke;
+  font-size: small;
+}
+
+#bmi-body {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  background-color: whitesmoke;
+  font-size: small;
+}
+
+/* ---------- DONUT LEGEND ---------- */
 .legend {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  padding: 8px 0;
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  margin-right: 20px;
 }
 
 .legend-text {
   font-size: 14px;
   font-weight: bold;
-  color: #0f2244;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .legend-color {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #0f2244;
-  border-radius: 2px;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
 }
-
-
-
-
-
-
-

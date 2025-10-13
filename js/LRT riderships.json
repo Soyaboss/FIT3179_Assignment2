@@ -44,7 +44,7 @@
       {"field": "date", "type": "temporal", "timeUnit": "utcyearmonthdate", "title": "Date"},
       {"field": "mode", "type": "nominal", "title": "Mode"},
       {"field": "mode_line", "type": "nominal", "title": "Line"},
-      {"field": "ridership", "type": "quantitative", "title": "Ridership", "format": ",f"}  // <-- same for tooltip
+      {"field": "ridership", "type": "quantitative", "title": "Ridership", "format": ",f"} 
     ]
   },
   "config": {

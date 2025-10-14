@@ -2,11 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Daily LRT & MRT Ridership — Pick a Date Range"},
   "data": {
-    "url": "https://raw.githubusercontent.com/Soyaboss/3179_homework_week10/refs/heads/main/ridership_lrt_mrt_long%20(1).csv",
+    "url": "https://raw.githubusercontent.com/Soyaboss/FIT3179_Assignment2/refs/heads/main/data/ridership_lrt_mrt_long%20(1).csv",
     "format": {
       "type": "csv",
       "parse": {
-        "date": "utc:%Y-%m-%d",
+        "date": "utc:%-d/%-m/%Y",
         "ridership": "number"           
       }
     }

@@ -7,46 +7,44 @@
       "type": "csv",
       "parse": {
         "date": "utc:%-d/%-m/%Y",
-        "ridership": "number"           
+        "ridership": "number"
       }
     }
   },
   "width": 900,
+
   "params": [
-    {
-      "name": "modePick",
-      "value": "All",
-      "bind": {"input": "select", "options": ["All", "LRT", "MRT"], "name": "Type: "}
-    },
     {"name": "startDate", "value": "2019-01-01", "bind": {"input": "date", "name": "Start: "}},
-    {"name": "endDate", "value": "2025-12-31", "bind": {"input": "date", "name": "End: "}}
+    {"name": "endDate",   "value": "2025-12-31", "bind": {"input": "date", "name": "End: "}},
+    {"name": "allLines", "value": true, "bind": {"input": "checkbox", "name": "All lines "}},
+    {"name": "show_lrt_ampang",    "value": true, "bind": {"input": "checkbox", "name": "lrt ampang "}},
+    {"name": "show_lrt_kajang",    "value": true, "bind": {"input": "checkbox", "name": "lrt kajang "}},
+    {"name": "show_mrt_kajang",    "value": true, "bind": {"input": "checkbox", "name": "mrt kajang "}},
+    {"name": "show_mrt_putrajaya", "value": true, "bind": {"input": "checkbox", "name": "mrt putrajaya "}}
   ],
+
   "transform": [
-    {"filter": "modePick == 'All' || datum.mode == modePick"},
-    {"filter": "isValid(datum.date) && datum.date >= toDate(startDate) && datum.date <= toDate(endDate)"}
+    {
+      "filter": "toDate(datum.date) >= toDate(startDate) && toDate(datum.date) <= toDate(endDate)"
+    },
+    {
+      "filter": "allLines || ((show_lrt_ampang && lower(datum.mode_line) == 'lrt ampang') || (show_lrt_kajang && lower(datum.mode_line) == 'lrt kajang') || (show_mrt_kajang && lower(datum.mode_line) == 'mrt kajang') || (show_mrt_putrajaya && lower(datum.mode_line) == 'mrt putrajaya'))"
+    }
   ],
+
   "mark": {"type": "line", "point": false},
+
   "encoding": {
-    "x": {"field": "date", "type": "temporal", "timeUnit": "utcyearmonthdate", "title": "Date"},
-    "y": {
-      "field": "ridership",
-      "type": "quantitative",
-      "title": "Ridership",
-      "axis": { "format": ",f" }        
-    },
-    "color": {
-      "field": "mode_line",
-      "type": "nominal",
-      "title": "Line",
-      "legend": {"title": "LRT/MRT Lines"}
-    },
+    "x": {"field": "date", "type": "temporal", "title": "Date"},
+    "y": {"field": "ridership", "type": "quantitative", "title": "Ridership", "axis": {"format": ",f"}},
+    "color": {"field": "mode_line", "type": "nominal", "title": "Line", "legend": {"title": "LRT/MRT Lines"}},
     "tooltip": [
-      {"field": "date", "type": "temporal", "timeUnit": "utcyearmonthdate", "title": "Date"},
-      {"field": "mode", "type": "nominal", "title": "Mode"},
+      {"field": "date", "type": "temporal", "title": "Date"},
       {"field": "mode_line", "type": "nominal", "title": "Line"},
-      {"field": "ridership", "type": "quantitative", "title": "Ridership", "format": ",f"} 
+      {"field": "ridership", "type": "quantitative", "title": "Ridership", "format": ",f"}
     ]
   },
+
   "config": {
     "axis": {"grid": true},
     "legend": {"orient": "bottom"},

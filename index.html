@@ -6,7 +6,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
   
-  <!-- Your CSS -->
+  
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 </head>
 <body>
@@ -45,7 +45,7 @@
       Where are the LRT stations located?
     </h2>
 
-    <div class="flex-container">
+    <div class="flex-container reverse">
       <div class="idiom">
         <div id="lrt_stations_map" class="vis-container"></div>
       </div>
@@ -78,6 +78,19 @@
       </div>
     </div>
 
+    <h2>Which days see higher average ridership?</h2>
+    <div class="flex-container reverse">
+      <div class="idiom">
+        <div id="ridership_by_day" class="vis-container card"></div>
+      </div>
+      <div class="description">
+        <p>
+          This chart shows <b>average ridership by day of week</b>. Use the controls to filter by <b>line</b> and <b>day type</b> (weekday/weekend).
+          Weekdays typically peak on <b>Tuesday–Thursday</b> with commuting, while weekends often dip except for <b>Saturday</b> leisure patterns.
+        </p>
+      </div>
+    </div>
+
   </div>
 
   <footer>
@@ -103,6 +116,10 @@
 
     var ridershipSpec = "js/LRT riderships.json";
     vegaEmbed('#lrt_mrt_ridership', ridershipSpec).then(function(result) {
+    }).catch(console.error);
+
+    var daySpec = "js/Ridership Day.json";
+    vegaEmbed('#ridership_day', fareSpec).then(function(result) {
     }).catch(console.error);
   </script>
 

@@ -81,7 +81,7 @@
     <h2>Which days see higher average ridership?</h2>
     <div class="flex-container reverse">
       <div class="idiom">
-        <div id="ridership day" class="vis-container"></div>
+        <div id="ridership_day" class="vis-container"></div>
       </div>
       <div class="description">
         <p>
@@ -119,7 +119,7 @@
     }).catch(console.error);
 
     var daySpec = "js/Ridership Day.json";
-    vegaEmbed('#ridership_day', fareSpec).then(function(result) {
+    vegaEmbed('#ridership_day', daySpec).then(function(result) {
     }).catch(console.error);
   </script>
 

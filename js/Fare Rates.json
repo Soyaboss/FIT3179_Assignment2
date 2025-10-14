@@ -4,8 +4,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Soyaboss/FIT3179_Assignment2/refs/heads/main/data/Fare_long.csv"
   },
-  "width": 900,
-  "height": 900,
+  "width": 800,
+  "height": 800,
   "params": [
     {
       "name": "FareMax",

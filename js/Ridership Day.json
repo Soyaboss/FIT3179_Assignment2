@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {"text": "Average Ridership by Day of Week (Filter by Line + Day Type)"},
+  "title": {"text": "Average Ridership by Day of Week"},
   "data": {
     "url": "https://raw.githubusercontent.com/Soyaboss/FIT3179_Assignment2/refs/heads/main/data/ridership_lrt_mrt_long_with_days.csv",
     "format": {

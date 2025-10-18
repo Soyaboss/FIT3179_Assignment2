@@ -14,8 +14,8 @@
   "width": 900,
 
   "params": [
-    {"name": "startDate", "value": "2019-01-01", "bind": {"input": "date", "name": "Start: "}},
-    {"name": "endDate",   "value": "2025-12-31", "bind": {"input": "date", "name": "End: "}},
+    {"name": "startDate", "value": "2024-12-01", "bind": {"input": "date", "name": "Start: "}},
+    {"name": "endDate",   "value": "2024-12-31", "bind": {"input": "date", "name": "End: "}},
     {"name": "allLines", "value": true, "bind": {"input": "checkbox", "name": "All lines "}},
     {"name": "show_lrt_ampang",    "value": true, "bind": {"input": "checkbox", "name": "lrt ampang "}},
     {"name": "show_lrt_kajang",    "value": true, "bind": {"input": "checkbox", "name": "lrt kajang "}},

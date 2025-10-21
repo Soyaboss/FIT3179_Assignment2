@@ -8,7 +8,7 @@ body * {
   font-size: small;
 }
 
-/* ---------- PAGE CONTAINER ---------- */
+
 .page {
   width: 1350px;
   margin: auto;
@@ -20,7 +20,7 @@ body * {
               -10px -10px 20px rgb(33, 42, 61);
 }
 
-/* ---------- FOOTER SECTION ---------- */
+
 footer {
   background-color: rgb(33, 42, 61);
   color: whitesmoke;
@@ -65,7 +65,7 @@ p {
   line-height: 25px;
   padding-left: 20px;
   padding-right: 20px;
-  color: #1d2740; /* dark text for content area */
+  color: #1d2740;
 }
 
 h1 {
@@ -107,7 +107,7 @@ h3 {
 .vis-container {
   width: 100%;
   text-align: center;
-  padding-left: 38px; /* keep if you like the slight indent */
+  padding-left: 38px; 
 }
 
 .flex-container {
@@ -116,7 +116,7 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* Optional: reverse order for alternating sections */
+
 .flex-container.reverse {
   flex-direction: row-reverse;
 }
@@ -132,3 +132,4 @@ h3 {
   padding: 15px;
   margin: auto;
 }
+
